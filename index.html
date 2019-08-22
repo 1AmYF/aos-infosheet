@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--
+Basic introduction to Ace of Spades Classic
+https://github.com/1AmYF/aos-infosheet
+-->
+<html lang="en">
+<head>
+	<title>Ace of Spades Infosheet</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+	<style>
+	body, div, p, table, th, td, span, a {
+		color: #333333;
+		font-size: 1em;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	body {
+		margin: 96px 0 0 0;
+		padding: 0;
+		background-image: url(images/pattern.png);
+		background-position: center top;
+		background-attachment: scroll;
+	}
+	a {
+		color: #00008B;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	h1 {
+		clear: both;
+		color: #FFFFFF;
+		background-color: #006400;
+		font-size: 1.5em;
+		font-weight: bold;
+		margin: 0;
+		padding: 0 10px 1px 10px;
+	}
+	p, table {
+		background-color: #E2E1DE;
+		margin: 0;
+		padding: 10px;
+	}
+	th, td {
+		padding: 5px 10px 5px 10px;
+	}
+	td {
+		width: 100%;
+	}
+	.deprecated {
+		color: #808080;
+	}
+	#content {
+		background: rgba(255, 255, 255, 0.4);
+		text-align: left;
+	}
+	#content, #footer {
+		margin: auto;
+		max-width: 960px;
+	}
+	#intro {
+		background-image: url(images/screen.jpg);
+		background-position: center;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		text-shadow: 2px 2px 2px #000000;
+	}
+	#intro em {
+		font-weight: bold;
+	}
+	#intro span {
+		color: #FFFFFF;
+		display: block;
+		padding: 10px;
+		max-width: 235px;
+	}
+	#intro a {
+		color: #D3D3D3;
+	}
+	#intro::after, #infoboxes::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#infoboxes {
+		padding: 10px;
+	}
+	#infoboxes div {
+		float: left;
+		padding: 10px;
+		max-width: 450px;
+	}
+	#infoboxes .right {
+		float: right;
+	}
+	#about {
+		float: left;
+	}
+	#lang {
+		float: right;
+	}
+	#lang select {
+		width: 6em;
+	}
+	#clients th {
+		white-space: nowrap;
+	}
+	#items img {
+		display: inline-block;
+		float: left;
+		margin: 8px;
+		width: 112px;
+	}
+	#footer {
+		background-color: transparent;
+		font-size: 0.75em;
+		text-align: right;
+	}
+	#footer a {
+		display: inline-block;
+		margin: 10px 8px 5px 0;
+	}
+	#footer img {
+		height: 26px;
+	}
+	@media all and (max-width: 976px) {
+		#infoboxes div {
+			float: none;
+			max-width: none;
+		}
+		#infoboxes .right {
+			float: none;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div id="content">
+	<p id="intro"><span id="about"><em>Ace of Spades</em> is a free sandbox building and first-person voxel shooter featuring a fully destructible terrain. Watch <a href="https://www.youtube.com/playlist?list=PL_Ah90hDWGH1gMJ-1g0vZIp20_nW82pfI">trailers</a> or <a href="https://imgur.com/a/aoPhiK3">images</a>.</span><span id="lang"><select><option>English</option></select></span></p>
+	<div id="infoboxes">
+	<div>
+		<h1>Clients</h1>
+		<table id="clients">
+		<tr>
+			<th>OpenSpades</th>
+			<td>OpenSpades is an open source OpenGL-based client created by yvt with improved graphics (and higher system requirements). <a href="https://github.com/yvt/openspades/releases/latest">Download</a></td>
+		</tr>
+		<tr>
+			<th>BetterSpades</th>
+			<td>BetterSpades is an open source client created by ByteBit that is more close to the original and also runs on older systems. <a href="https://github.com/xtreme8000/BetterSpades/releases/latest">Download</a></td>
+		</tr>
+		<tr>
+			<th class="deprecated">Ace of Spades</th>
+			<td class="deprecated">The last official beta version 0.75 of the original Ace of Spades by Ben Aksoy. No longer being maintained. <a class="deprecated" href="http://www.moddb.com/downloads/start/43183">Download</a></td>
+		</tr>
+		</table>
+	</div>
+	<div>
+		<h1>Getting Started</h1>
+		<p id="start">After joining a server, you will be asked to select a team and a weapon. You can always change your selection during the game by pressing the L key (or dot and comma, depending on client). Press the T key to write into the chat. Use Y for teamchat. To use commands, write them into the chat. Type /help to see a list of available commands and info about the server.</p>
+	</div>
+	<div class="right">
+		<h1>Game Items</h1>
+		<table id="items">
+		<tr>
+			<th><img src="images/item_rifle.png" alt="Rifle" /></th>
+			<td>The rifle is an all-round weapon, with a long effective range, making it especially suitable for sniping.</td>
+		</tr>
+		<tr>
+			<th><img src="images/item_smg.png" alt="SMG" /></th>
+			<td>The SMG (Submachine Gun) is a weapon for close to mid-range assault, with a high fire rate and strong recoil.</td>
+		</tr>
+		<tr>
+			<th><img src="images/item_shotgun.png" alt="Shotgun" /></th>
+			<td>The shotgun is most suitable for close range attacks, shoots several bullets simultaneously and has a short reload time.</td>
+		</tr>
+		<tr>
+			<th><img src="images/item_grenade.png" alt="Grenade" /></th>
+			<td>Use grenades to inflict enemy and block damage. Keep distance as it also applies damage to yourself.</td>
+		</tr>
+		<tr>
+			<th><img src="images/item_block.png" alt="Block" /></th>
+			<td>Build a single block with left mouse key. Hold right mouse key to line build. Use arrow keys to choose color.</td>
+		</tr>
+		<tr>
+			<th><img src="images/item_spade.png" alt="Spade" /></th>
+			<td>The spade removes blocks and does melee damage. Left mouse key for single block removal, right mouse key for tunneling 3 blocks per hit.</td>
+		</tr>
+		<tr>
+			<th><img src="images/item_cp.png" alt="Command Post (Base)" /></th>
+			<td>Go to your base to restock health and ammo and to capture the enemy intel. In territory game modes, hold position to capture.</td>
+		</tr>
+		<tr>
+			<th><img src="images/item_intel.png" alt="Intel" /></th>
+			<td>Pick up the enemy intel by walking over it, then bring it to your base.</td>
+		</tr>
+		</table>
+	</div>
+	<div>
+		<h1>Game Modes</h1>
+		<table id="modes">
+		<tr>
+			<th>Arena</th>
+			<td>No respawns, the last player remaining wins the round for his team.</td>
+		</tr>
+		<tr>
+			<th>Babel</th>
+			<td>Build a tower to reach the sky platform before the enemy team does.</td>
+		</tr>
+		<tr>
+			<th>CTF</th>
+			<td>Capture the Flag: Find the enemy intel and bring it to your base.</td>
+		</tr>
+		<tr>
+			<th>Push</th>
+			<td>Build bridges over the water to reach your base before the enemy team does.</td>
+		</tr>
+		<tr>
+			<th>TC</th>
+			<td>Territorial Control: Capture every base on the map.</td>
+		</tr>
+		<tr>
+			<th>TDM</th>
+			<td>Team Deathmatch: The team that first achieves a certain number of kills, wins.</td>
+		</tr>
+		<tr>
+			<th>TOW</th>
+			<td>Tug of War: Advance towards the enemy by capturing the next base ahead.</td>
+		</tr>
+		</table>
+	</div>
+	<div>
+		<h1>History</h1>
+		<p id="history">The game <em>Ace of Spades</em> was developed by Ben Aksoy in 2011 as a beta version. Jagex Games Studio took over development of the game in 2012, making it payware on Steam and changing its gameplay. The site buildandshoot.com was then launched by fans to create a place where the last official beta version (0.75) can still be played. During 2013, japanese developer yvt released the first version of <em>OpenSpades</em>, an alternative client for the last beta version with improved graphics. In late 2016, a group of developers started <em>piqueserver</em> to continue development of the server software. In 2017, the developer ByteBit released the first version of his alternative client <em>BetterSpades</em>, aiming to replicate the beta version more closely. The steam version of the game was shut down in 2019.</p>
+	</div>
+	<div>
+		<h1>Related Links</h1>
+		<p id="links"><a href="https://1amyf.github.io/aos-js-serverlist/serverlist.html">Serverlist</a>, <a href="http://aloha.pk">aloha.pk</a>, <a href="http://sauerkraut.bplaced.net">*Sauerkraut</a>, <a href="https://www.buildandshoot.com">Build and Shoot</a>, <a href="http://openspades.yvt.jp">OpenSpades</a>, <a href="https://www.piqueserver.org">piqueserver</a>, <a href="http://aos.party">aos.party</a></p>
+	</div>
+	</div>
+	</div>
+	<div id="footer"><a href="https://github.com/1AmYF/aos-infosheet"><img src="images/github.png" alt="GitHub" /></a></div>
+</body>
+</html>
