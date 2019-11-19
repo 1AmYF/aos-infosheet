@@ -9,8 +9,9 @@ https://github.com/1AmYF/aos-infosheet
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+	<script src="translations.js"></script>
 	<style>
-	body, div, p, table, th, td, span, a {
+	body, div, p, table, th, td, a {
 		color: #333333;
 		font-size: 1em;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -66,14 +67,19 @@ https://github.com/1AmYF/aos-infosheet
 		background-color: transparent;
 		text-shadow: 2px 2px 2px #000000;
 	}
-	#intro span {
+	#intro span#about, #intro span#lang {
 		color: #FFFFFF;
 		display: block;
 		padding: 10px;
-		max-width: 235px;
+	}
+	#intro span#about {
+		max-width: 220px;
+		min-height: 95px;
 	}
 	#intro a {
+		display: inline-block;
 		color: #FFFFFF;
+		margin-top: 5px;
 	}
 	#intro::after, #infoboxes::after {
 		content: "";
@@ -131,108 +137,144 @@ https://github.com/1AmYF/aos-infosheet
 		}
 	}
 	</style>
+	<script>
+	function init() {
+		var locale = navigator.language;
+		if (locale == null || !(locale.toLowerCase() in translations)) {
+			locale = "en";
+		}
+		setLanguage(locale);
+	}
+	function translate(locale) {
+		var translation = translations[locale];
+		if (translation != null) {
+			for (var key in translation) {
+				var elems = document.getElementsByClassName(key);
+				for (var i = 0; i < elems.length; i++) {
+					elems[i].innerHTML = translation[key];
+				}
+			}
+		}
+	}
+	function listLanguages(locale) {
+		document.getElementById("langlist").innerHTML = "";
+		for (var i in translations) {
+			var option = document.createElement("option");
+			option.text = translations[i]["lang.name"];
+			option.value = i;
+			if (i == locale) {
+				option.selected = "selected";
+			}
+			document.getElementById("langlist").appendChild(option);
+		}
+	}
+	function setLanguage(locale) {
+		translate(locale);
+		listLanguages(locale);
+	}
+	</script>
 </head>
-<body>
+<body onload="init();">
 	<div id="content">
-	<p id="intro"><span id="about">Ace of Spades is a free sandbox building and first-person voxel shooter featuring a fully destructible terrain.<br /><a href="https://www.youtube.com/playlist?list=PL_Ah90hDWGH1gMJ-1g0vZIp20_nW82pfI">Videos</a> | <a href="https://imgur.com/a/aoPhiK3">Screenshots</a></span><span id="lang"><select><option>English</option></select></span></p>
+	<p id="intro"><span id="about"><span class="lang.intro">Ace of Spades is a free first-person voxel shooter featuring a fully destructible terrain.</span><br /><a href="https://www.youtube.com/playlist?list=PL_Ah90hDWGH1gMJ-1g0vZIp20_nW82pfI"><span class="lang.videos">Videos</span></a> | <a href="https://imgur.com/a/aoPhiK3"><span class="lang.screenshots">Screenshots</span></a></span><span id="lang"><select id="langlist" onchange="setLanguage(this.value);"></select></span></p>
 	<div id="infoboxes">
 	<div>
-		<h1>Clients</h1>
+		<h1><span class="lang.clients">Clients</span></h1>
 		<table id="clients">
 		<tr>
 			<th>OpenSpades</th>
-			<td>OpenSpades is an open source OpenGL-based client created by yvt with improved graphics (and higher system requirements). <a href="https://github.com/yvt/openspades/releases/latest">Download</a></td>
+			<td><span class="lang.openspades.intro">OpenSpades is an open source OpenGL-based client created by yvt with improved graphics (and higher system requirements).</span> <a href="https://github.com/yvt/openspades/releases/latest"><span class="lang.download">Download</span></a></td>
 		</tr>
 		<tr>
 			<th>BetterSpades</th>
-			<td>BetterSpades is an open source client created by ByteBit that is more close to the original and also runs on older systems. <a href="https://github.com/xtreme8000/BetterSpades/releases/latest">Download</a></td>
+			<td><span class="lang.betterspades.intro">BetterSpades is an open source client created by ByteBit that is more close to the original and also runs on older systems.</span> <a href="https://github.com/xtreme8000/BetterSpades/releases/latest"><span class="lang.download">Download</span></a></td>
 		</tr>
 		<tr>
 			<th class="deprecated">Ace of Spades</th>
-			<td class="deprecated">The last official beta version 0.75 of the original Ace of Spades by Ben Aksoy. No longer being maintained. <a class="deprecated" href="http://www.moddb.com/downloads/start/43183">Download</a></td>
+			<td class="deprecated"><span class="lang.voxlap.intro">The last official beta version 0.75 of the original Ace of Spades by Ben Aksoy. No longer being maintained.</span> <a class="deprecated" href="http://www.moddb.com/downloads/start/43183"><span class="lang.download">Download</span></a></td>
 		</tr>
 		</table>
 	</div>
 	<div>
-		<h1>Getting Started</h1>
-		<p id="start">After joining a server, you will be asked to select a team and a weapon. You can always change your selection during the game by pressing the L key (or dot and comma, depending on client). Press the T key to write into the chat. Use Y for teamchat. To use commands, write them into the chat. Type /help to see a list of available commands and info about the server. For a map overview press N (or M, depending on client).</p>
+		<h1><span class="lang.start">Getting Started</span></h1>
+		<p id="start"><span class="lang.start.intro">After joining a server, you will be asked to select a team and a weapon. You can always change your selection during the game by pressing the L key (or dot and comma, depending on client). Press the T key to write into the chat. Use Y for teamchat. To use commands, write them into the chat. Type /help to see a list of available commands and info about the server. For a map overview press N (or M, depending on client).</span></p>
 	</div>
 	<div class="right">
-		<h1>Game Items</h1>
+		<h1><span class="lang.items">Game Items</span></h1>
 		<table id="items">
 		<tr>
 			<th><img src="images/item_rifle.png" alt="Rifle" /></th>
-			<td>The rifle is an all-round weapon, with a long effective range, making it especially suitable for sniping.</td>
+			<td><span class="lang.items.rifle">The rifle is an all-round weapon, with a long effective range, making it especially suitable for sniping.</span></td>
 		</tr>
 		<tr>
 			<th><img src="images/item_smg.png" alt="SMG" /></th>
-			<td>The SMG (Submachine Gun) is a weapon for close to mid-range assault, with a high fire rate and strong recoil.</td>
+			<td><span class="lang.items.smg">The SMG (Submachine Gun) is a weapon for close to mid-range assault, with a high fire rate and strong recoil.</span></td>
 		</tr>
 		<tr>
 			<th><img src="images/item_shotgun.png" alt="Shotgun" /></th>
-			<td>The shotgun is most suitable for close range attacks, shoots several bullets simultaneously and has a short reload time.</td>
+			<td><span class="lang.items.shotgun">The shotgun is most suitable for close range attacks, shoots several bullets simultaneously and has a short reload time.</span></td>
 		</tr>
 		<tr>
 			<th><img src="images/item_grenade.png" alt="Grenade" /></th>
-			<td>Use grenades to inflict enemy and block damage. Keep distance as it also applies damage to yourself.</td>
+			<td><span class="lang.items.grenade">Use grenades to inflict enemy and block damage. Keep distance as it also applies damage to yourself.</span></td>
 		</tr>
 		<tr>
 			<th><img src="images/item_block.png" alt="Block" /></th>
-			<td>Build a single block with left mouse key. Hold right mouse key to line build. Use arrow keys to choose color. Press E to pick color from blocks.</td>
+			<td><span class="lang.items.block">Build a single block with left mouse key. Hold right mouse key to line build. Use arrow keys to choose color. Press E to pick color from blocks.</span></td>
 		</tr>
 		<tr>
 			<th><img src="images/item_spade.png" alt="Spade" /></th>
-			<td>The spade removes blocks and does melee damage. Left mouse key for single block removal, right mouse key for tunneling 3 blocks per hit.</td>
+			<td><span class="lang.items.spade">The spade removes blocks and does melee damage. Left mouse key for single block removal, right mouse key for tunneling 3 blocks per hit.</span></td>
 		</tr>
 		<tr>
 			<th><img src="images/item_cp.png" alt="Command Post (Base)" /></th>
-			<td>Go to your base to restock health and ammo and to capture the enemy intel. In territory game modes, hold position to capture.</td>
+			<td><span class="lang.items.cp">Go to your base to restock health and ammo and to capture the enemy intel. In territory game modes, hold position to capture.</span></td>
 		</tr>
 		<tr>
 			<th><img src="images/item_intel.png" alt="Intel" /></th>
-			<td>Pick up the enemy intel by walking over it, then bring it to your base.</td>
+			<td><span class="lang.items.intel">Pick up the enemy intel by walking over it, then bring it to your base.</span></td>
 		</tr>
 		</table>
 	</div>
 	<div>
-		<h1>Game Modes</h1>
+		<h1><span class="lang.modes">Game Modes</span></h1>
 		<table id="modes">
 		<tr>
 			<th>Arena</th>
-			<td>No respawns, the last player remaining wins the round for his team.</td>
+			<td><span class="lang.mode.arena">No respawns, the last player remaining wins the round for his team.</span></td>
 		</tr>
 		<tr>
 			<th>Babel</th>
-			<td>Build a tower to reach the sky platform before the enemy team does.</td>
+			<td><span class="lang.mode.babel">Build a tower to reach the sky platform before the enemy team does.</span></td>
 		</tr>
 		<tr>
 			<th>CTF</th>
-			<td>Capture the Flag: Find the enemy intel and bring it to your base.</td>
+			<td><span class="lang.mode.ctf">Capture the Flag: Find the enemy intel and bring it to your base.</span></td>
 		</tr>
 		<tr>
 			<th>Push</th>
-			<td>Build bridges over the water to reach your base before the enemy team does.</td>
+			<td><span class="lang.mode.push">Build bridges over the water to reach your base before the enemy team does.</span></td>
 		</tr>
 		<tr>
 			<th>TC</th>
-			<td>Territorial Control: Capture every base on the map.</td>
+			<td><span class="lang.mode.tc">Territorial Control: Capture every base on the map.</span></td>
 		</tr>
 		<tr>
 			<th>TDM</th>
-			<td>Team Deathmatch: The team that first achieves a certain number of kills, wins.</td>
+			<td><span class="lang.mode.tdm">Team Deathmatch: The team that first achieves a certain number of kills, wins.</span></td>
 		</tr>
 		<tr>
 			<th>TOW</th>
-			<td>Tug of War: Advance towards the enemy by capturing the next base ahead.</td>
+			<td><span class="lang.mode.tow">Tug of War: Advance towards the enemy by capturing the next base ahead.</span></td>
 		</tr>
 		</table>
 	</div>
 	<div>
-		<h1>History</h1>
-		<p id="history">The game Ace of Spades was developed by Ben Aksoy in 2011 as a beta version. Jagex Games Studio took over development of the game in 2012, making it payware on Steam and changing its gameplay. The site buildandshoot.com was then launched by fans to create a place where the last official beta version (0.75) can still be played. During 2013, japanese developer yvt released the first version of OpenSpades, an alternative client for the last beta version with improved graphics. In late 2016, a group of developers started Piqueserver to continue development of the server software. In 2017, the developer ByteBit released the first version of his alternative client BetterSpades, aiming to replicate the beta version more closely. The steam version of the game was shut down in 2019.</p>
+		<h1><span class="lang.history">History</span></h1>
+		<p id="history"><span class="lang.history.intro">The game Ace of Spades was developed by Ben Aksoy in 2011 as a beta version. Jagex Games Studio took over development of the game in 2012, making it payware on Steam and changing its gameplay. The site buildandshoot.com was then launched by fans to create a place where the last official beta version (0.75) can still be played. During 2013, japanese developer yvt released the first version of OpenSpades, an alternative client for the last beta version with improved graphics. In late 2016, a group of developers started Piqueserver to continue development of the server software. In 2017, the developer ByteBit released the first version of his alternative client BetterSpades, aiming to replicate the beta version more closely. The steam version of the game was shut down in 2019.</span></p>
 	</div>
 	<div>
-		<h1>Related Links</h1>
+		<h1><span class="lang.links">Related Links</span></h1>
 		<p id="links"><a href="https://1amyf.github.io/aos-js-serverlist/serverlist.html">Serverlist</a>, <a href="http://aloha.pk">aloha.pk</a>, <a href="http://sauerkraut.bplaced.net">*Sauerkraut</a>, <a href="https://www.buildandshoot.com">Build and Shoot</a>, <a href="http://openspades.yvt.jp">OpenSpades</a>, <a href="https://www.piqueserver.org">Piqueserver</a>, <a href="http://aos.party">aos.party</a></p>
 	</div>
 	</div>
