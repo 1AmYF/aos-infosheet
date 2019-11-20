@@ -139,8 +139,8 @@ https://github.com/1AmYF/aos-infosheet
 	</style>
 	<script>
 	function init() {
-		var locale = navigator.language;
-		if (locale == null || !(locale.toLowerCase() in translations)) {
+		var locale = navigator.language.toLowerCase().split("-")[0];
+		if (locale == null || !(locale in translations)) {
 			locale = "en";
 		}
 		setLanguage(locale);

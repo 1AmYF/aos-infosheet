@@ -1,6 +1,7 @@
 var translations = {
-"en": {
-"lang.name": "English",
+
+"en" : {
+"lang.name" : "English",
 "lang.intro" : "Ace of Spades is a free first-person voxel shooter featuring a fully destructible terrain.",
 "lang.videos" : "Videos",
 "lang.screenshots" : "Screenshots",
@@ -32,4 +33,5 @@ var translations = {
 "lang.history.intro" : "The game Ace of Spades was developed by Ben Aksoy in 2011 as a beta version. Jagex Games Studio took over development of the game in 2012, making it payware on Steam and changing its gameplay. The site buildandshoot.com was then launched by fans to create a place where the last official beta version (0.75) can still be played. During 2013, japanese developer yvt released the first version of OpenSpades, an alternative client for the last beta version with improved graphics. In late 2016, a group of developers started Piqueserver to continue development of the server software. In 2017, the developer ByteBit released the first version of his alternative client BetterSpades, aiming to replicate the beta version more closely. The steam version of the game was shut down in 2019.",
 "lang.links" : "Related Links"
 }
+
 };
