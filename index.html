@@ -7,6 +7,7 @@ https://github.com/1AmYF/aos-infosheet
 <head>
 	<title>Ace of Spades Infosheet</title>
 	<meta charset="utf-8" />
+	<meta name="description" content="Quick overview and basic introduction to the game Ace of Spades Classic." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 	<script src="translations.js"></script>
@@ -171,6 +172,7 @@ https://github.com/1AmYF/aos-infosheet
 	function setLanguage(locale) {
 		translate(locale);
 		listLanguages(locale);
+		document.documentElement.setAttribute("lang", locale);
 	}
 	</script>
 </head>
