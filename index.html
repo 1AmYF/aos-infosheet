@@ -12,7 +12,7 @@ https://github.com/1AmYF/aos-infosheet
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 	<script src="translations.js"></script>
 	<style>
-	body, div, p, table, th, td, a {
+	body, div, p, ul, table, th, td, a {
 		color: #333333;
 		font-size: 1em;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -38,7 +38,7 @@ https://github.com/1AmYF/aos-infosheet
 		margin: 0;
 		padding: 0 10px 1px 10px;
 	}
-	p, table {
+	p, ul, table {
 		background-color: #E2E1DE;
 		margin: 0;
 		padding: 10px;
@@ -115,6 +115,18 @@ https://github.com/1AmYF/aos-infosheet
 		float: left;
 		margin: 8px;
 		width: 112px;
+	}
+	#links {
+		list-style: none;
+	}
+	#links li {
+		display: inline;
+	}
+	#links li::after {
+		content: ", ";
+	}
+	#links li:last-child::after {
+		content: "";
 	}
 	#footer {
 		background-color: transparent;
@@ -282,7 +294,15 @@ https://github.com/1AmYF/aos-infosheet
 	</div>
 	<div>
 		<h1><span class="lang.links">Related Links</span></h1>
-		<p id="links"><a href="https://1amyf.github.io/aos-js-serverlist/serverlist.html?local&refresh&secsort=false">Serverlist</a>, <a href="http://aloha.pk">aloha.pk</a>, <a href="http://sauerkraut.bplaced.net">*Sauerkraut</a>, <a href="https://www.buildandshoot.com">Build and Shoot</a>, <a href="http://openspades.yvt.jp">OpenSpades</a>, <a href="https://www.piqueserver.org">Piqueserver</a>, <a href="http://aos.party">aos.party</a></p>
+		<ul id="links">
+			<li><a href="https://1amyf.github.io/aos-js-serverlist/serverlist.html?local&refresh&secsort=false">Serverlist</a></li>
+			<li><a href="http://aloha.pk">aloha.pk</a></li>
+			<li><a href="http://sauerkraut.bplaced.net">*Sauerkraut</a></li>
+			<li><a href="https://www.buildandshoot.com">Build and Shoot</a></li>
+			<li><a href="http://openspades.yvt.jp">OpenSpades</a></li>
+			<li><a href="https://www.piqueserver.org">Piqueserver</a></li>
+			<li><a href="http://aos.party">aos.party</a></li>
+		</ul>
 	</div>
 	</div>
 	</div>
