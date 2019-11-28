@@ -66,6 +66,40 @@ var translations = {
 "lang.history" : "History",
 "lang.history.intro" : "The game Ace of Spades was developed by Ben Aksoy in 2011 as a beta version. Jagex Games Studio took over development of the game in 2012, making it payware on Steam and changing its gameplay. The site buildandshoot.com was then launched by fans to create a place where the last official beta version (0.75) can still be played. During 2013, japanese developer yvt released the first version of OpenSpades, an alternative client for the last beta version with improved graphics. In late 2016, a group of developers started Piqueserver to continue development of the server software. In 2017, the developer ByteBit released the first version of his alternative client BetterSpades, aiming to replicate the beta version more closely. The steam version of the game was shut down in 2019.",
 "lang.links" : "Related Links"
+},
+
+"es" : {
+"lang.name" : "Español",
+"lang.intro" : "Ace of Spades es un juego gratis de disparos en primera persona, con gráficas voxel, que ofrece un escenario completamente destructible.",
+"lang.videos" : "Videos",
+"lang.screenshots" : "Screenshots",
+"lang.clients" : "Clientes",
+"lang.openspades.intro" : "OpenSpades es un cliente de código abierto basado en OpenGL creado por yvt con gráficos mejorados (y altos requerimientos del sistema).",
+"lang.betterspades.intro" : "BetterSpades es un cliente de código abierto creado por ByteBit, que es similar a la versión original, y además funciona en ordenadores viejos.",
+"lang.voxlap.intro": "La última versión beta oficial 0.75 del original Ace of Spades por Ben Aksoy. Ya no se sigue manteniendo.",
+"lang.download" : "Descargar",
+"lang.start" : "Empezando",
+"lang.start.intro" : "Al unirte a un servidor, se le pedirá que seleccione un equipo y un arma. Siempre podrás cambiar tu selección durante el juego presionando la tecla L (o punto y compa, dependiendo del cliente). Presiona la tecla T para escribir en el chat. Usa Y para charlar con tu equipo. Para usar comandos, escríbalos dentro del chat. Escribe /help para ver una lista de comandos disponibles e información acerca del servidor. Para una vista general del mapa, presione N (or M, dependiendo del cliente).",
+"lang.items" : "Ítems del juego",
+"lang.items.rifle" : "El rifle es un arma semi-automática, de efectivo largo alcance, haciendo que sea especialmente preferida por los francotiradores.",
+"lang.items.smg" : "La SMG (Submachine Gun, o metralleta) es un arma de asalto a corto alcance, con una alta cadencia de fuego y fuerte retroceso.",
+"lang.items.shotgun" : "La escopeta (Shotgun) es la más adecuada para ataques a corta distancia y disparar varias balas simultáneamente.",
+"lang.items.grenade" : "Usa granadas para dañar a enemigos y bloques. Mantén distancia ya que éstas pueden dañarte a ti mismo.",
+"lang.items.block" : "Construya un bloque con el click izquierdo. Mantenga presionado el click derecho para seleccionar más bloques. Use las teclas de flechas para elegir el color. Presiona E para elegir el color de un bloque.",
+"lang.items.spade" : "La pala quita los bloques y causa daño cuerpo a cuerpo. Click izquierdo para remover de a un bloque, click derecho para excavar de a 3 bloques.",
+"lang.items.cp" : "Ve a tu base para restaurar salud y munición y capturar la intel enemiga. En modos de juego de Territorios, manténte en su posición para capturar.",
+"lang.items.intel" : "Recoge la intel enemiga caminando sobre ella, luego llévala a tu base para capturarla.",
+"lang.modes" : "Modos de juego",
+"lang.mode.arena" : "No reapareces, el último jugador vivo gana la ronda para su equipo.",
+"lang.mode.babel" : "Construye una torre para llegar a la plataforma del cielo y capturar la intel antes que el otro equipo.",
+"lang.mode.ctf" : "Capture the Flag: encuentra la intel enemiga y llévala a tu base.",
+"lang.mode.push" : "Construye puentes sobre el agua para llegar a tu base y capturar la intel antes que el otro equipo lo haga.",
+"lang.mode.tc" : "Territorial Control: captura cada base del mapa.",
+"lang.mode.tdm" : "Team Deathmatch: el equipo que logre primero un cierto número de kills, gana.",
+"lang.mode.tow" : "Tug of War: avanza hacia el enemigo capturando la próxima base por delante.",
+"lang.history" : "Historia",
+"lang.history.intro" : "El juego Ace of Spades fue desarrollado por Ben Aksoy en 2011 como una versión beta. Jagex Games Studio se hizo cargo del desarrollo del juego en 2012, convirtiéndolo en un juego de pago en Steam y cambiando su jugabilidad. El sitio buildandshoot.com luego fue lanzado por fans para crear un lugar donde todavía se pueda jugar a la última versión beta oficial (0.75). Durante 2013, el desarrollador japonés yvt lanza la primera versión de OpenSpades, un cliente alternativo para la última versión beta con gráficos mejorados. A finales de 2016, un grupo de desarrolladores iniciaron Piqueserver para continuar con el desarrollo del software del servidor. En 2017, el desarrollador ByteBit lanza la primera versión de su cliente alternativo BetterSpades, con el objetivo de replicar la versión beta más de cerca. La versión de Steam de este juego cerró en 2019.",
+"lang.links" : "Links relacionados"
 }
 
 };
