@@ -100,13 +100,13 @@ var translations = {
 "lang.history" : "Historia",
 "lang.history.intro" : "El juego Ace of Spades fue desarrollado por Ben Aksoy en 2011 como una versión beta. Jagex Games Studio se hizo cargo del desarrollo del juego en 2012, convirtiéndolo en un juego de pago en Steam y cambiando su jugabilidad. El sitio buildandshoot.com luego fue lanzado por fans para crear un lugar donde todavía se pueda jugar a la última versión beta oficial (0.75). Durante 2013, el desarrollador japonés yvt lanza la primera versión de OpenSpades, un cliente alternativo para la última versión beta con gráficos mejorados. A finales de 2016, un grupo de desarrolladores iniciaron Piqueserver para continuar con el desarrollo del software del servidor. En 2017, el desarrollador ByteBit lanza la primera versión de su cliente alternativo BetterSpades, con el objetivo de replicar la versión beta más de cerca. La versión de Steam de este juego cerró en 2019.",
 "lang.links" : "Links relacionados"
-}, 
+},
 
 "pt" : {
 "lang.name" : "Português",
-"lang.intro" : "Ace of Spades é um jogo gratuito de tiro em primeira pessoa, com gráficos voxel, que oferece um cenário completamente destrutível",
+"lang.intro" : "Ace of Spades é um jogo gratuito de tiro em primeira pessoa, com gráficos voxel, que oferece um cenário completamente destrutível.",
 "lang.videos" : "Vídeos",
-"lang.screenshots" : "Prints",
+"lang.screenshots" : "Screenshots",
 "lang.clients" : "Clientes",
 "lang.openspades.intro" : "OpenSpades é um cliente de código aberto baseado em OpenGL, criado por yvt com gráficos melhorados (e requer maiores rendimentos do sistema).",
 "lang.betterspades.intro" : "BetterSpades é um cliente de código aberto, criado por Bytebit, similar a versão original, além de funcionar em computadores antigos.",
@@ -116,8 +116,8 @@ var translations = {
 "lang.start.intro" : "Ao unir-se a um servidor, você deverá selecionar uma equipe e arma. Você sempre poderá alterar a seleção durante o jogo, pressionando a tecla L (ou o ponto e vírgula, respectivamente). Pressione a tecla T para escrever no bate-papo. Utilize Y para conversar com a sua equipe. Para usar o comando, escreva no chat, com uma barra / antes do desejado. Escreva /help para ver a lista de comandos disponíveis e informações sobre o servidor. Para uma visão completa do mapa, pressione N (ou M, dependendo do cliente).",
 "lang.items" : "Itens do jogo",
 "lang.items.rifle" : "O rifle é uma arma semi-automática, de largo alcance, fazendo com que seja preferida por quem deseja mais precisão",
-"lang.items.smg" : "A SMG (Submachine Gun ou Submetralhadora) é uma arma de médio alcance, com tiros contínuos e recuos de mira.",
-"lang.items.shotgun" : "A espingarda (Shotgun) é a mais adequada para ataques de curta distância já que ela dispara várias balas simultaneamente.”,
+"lang.items.smg" : "A SMG (Submachine Gun ou Submetralhadora) é uma arma de médio alcance com tiros contínuos.",
+"lang.items.shotgun" : "A espingarda (Shotgun) é a mais adequada para ataques de curta distância já que ela dispara várias balas simultaneamente.",
 "lang.items.grenade" : "Use granadas para causar danos nos inimigos e destruir blocos. Mantenha distância ao lançá-la, porque ela pode causar dano em você também.",
 "lang.items.block" : "Construa um bloco com o botão esquerdo do mouse. Mantenha pressionado o botão direito para construir uma linha. Use as teclas de flechas para escolher uma cor. Pressione E para escolher a cor de um bloco ao redor.",
 "lang.items.spade" : "A pá elimina blocos e causa dano corpo a corpo. Aperte o botão esquerdo do mouse para remover um bloco, clique direito para escavar 3 blocos.",
