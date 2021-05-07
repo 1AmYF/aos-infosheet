@@ -109,7 +109,7 @@ var translations = {
 "lang.screenshots" : "Screenshots",
 "lang.clients" : "Clientes",
 "lang.openspades.intro" : "OpenSpades é um cliente de código aberto baseado em OpenGL, criado por yvt com gráficos melhorados (e requer maiores rendimentos do sistema).",
-"lang.betterspades.intro" : "BetterSpades é um cliente de código aberto, criado por Bytebit, similar a versão original, além de funcionar em computadores antigos.",
+"lang.betterspades.intro" : "BetterSpades é um cliente de código aberto, criado por ByteBit, similar a versão original, além de funcionar em computadores antigos.",
 "lang.voxlap.intro" : "A última versão beta oficial 0.75 de Ace of Spades foi feita por Ben Aksoy, não está sendo mantida.",
 "lang.download" : "Baixar",
 "lang.start" : "Começando",
